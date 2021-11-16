@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentinaIQ login page</title>
+    <link rel="stylesheet" href="Css/main.css">
+</head>
+<body>
+    <div class="block">
+      <div class="hero">
+        <form id="login" method="get" action="login.php">
+          <h2>Member Login</h2>
+          <input type="text" name="Email" id="Email" placeholder="Email" />
+          <i class="fa fa-user fa-lg"></i>
+          <br /><br />
+          <input type="Password" name="Password" id="Password" placeholder="Password" />
+          <i class="fas fa-lock"></i>
+          <br /><br /><br />
+          <input type="button" name="do-login" id="do-login" value="LOGIN" />
+          <br /><br />
+          <a class="alternate" href="#">Forgot Username / password ? </a>
+          <br /><br /><br /><br />
+          <a class="new-acc" href="#">Create your account </a>
+        </form>
+      </div>
+      <div class="computersize">
+        <img src="images/computer.png" class="container-img" alt="computer-circle" />
+      </div>
+            <script type="text/javascript">
+            function validation()
+            {
+            var form= document.getElementById("form");
+            var email = document.getElementById("Email").value;
+            var text = document.getElementById("text");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+            if(email.match(pattern))
+            {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML ="Your Email Address is valid ";
+                text.style.color ="#00ff00"
+            }
+            else
+            {
+                form.classList.add("valid");
+                form.classList.remove("invalid");
+                text.innerHTML ="Please Enter valid Address ";
+                text.style.color ="#00ff00"
+            
+            }
+            if(email =="")
+            {
+                form.classList.remove("valid");
+                form.classList.remove("invalid");
+                text.innerHTML ="";
+                text.style.color ="#00ff00"
+            }
+     
+
+}
+
+      </script>
+    </div>
+  </body>
+</html>
